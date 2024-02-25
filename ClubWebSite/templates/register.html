@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/images/style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+    <title>회원가입</title>
+    <!-- CSS 스타일링은 여기에 추가 -->
+    <style>
+        /* 입력 필드 스타일 */
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        
+        input[type="text"],
+        textarea {
+            width: 30%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            resize: vertical;
+        }
+        
+        textarea {
+            height: 150px; /* 텍스트 영역 높이 */
+        }
+        
+        input[type="submit"] {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Main Content -->
+        <main class="content">
+            <h1>회원가입</h1>
+            <form method="POST" action="/register">
+                <div class="form-group">
+                    <label for="student_id">학번</label>
+                    <input type="text" id="student_idG" name="student_idG" required>
+                </div>
+                <div class="form-group">
+                    <label for="name">이름</label>
+                    <input type="text" id="nameG" name="nameG" required>
+                </div>
+                <input type="submit" id="registerF" value="회원가입" required>
+                    
+            </main> 
+    </div>
+    <!-- 추가적인 스크립트는 여기에 추가 -->
+    <script src="../app.js"></script>
+</body>
+</html>

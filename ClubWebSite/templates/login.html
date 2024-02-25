@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        body {
+            background-color: #f0f8ff; /* 얇은 하늘색 배경 */
+            font-family: Arial, sans-serif; /* 폰트 설정 */
+        }
+        .container {
+            width: 50%;
+            margin: 0 auto;
+            padding-top: 100px;
+        }
+        h2 {
+            text-align: center;
+        }
+        .h3 {
+            display: flex;
+            text-align: center;
+            color: gray;
+            font-size:medium;
+            margin-top: 5px;
+            margin-left: 70px;
+        }
+        a {
+            text-decoration: none;
+        }
+        form {
+            width: 80%;
+            margin: 0 auto;
+        }
+        input[type="text"], input[type="password"], input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box; /* 입력 필드 크기 계산에 내용 패딩 및 테두리를 포함 */
+        }
+        input[type="submit"] {
+            background-color: #007bff; /* 버튼 색상 */
+            color: #fff; /* 버튼 텍스트 색상 */
+            cursor: pointer; /* 커서 스타일 변경 */
+        }
+        input[type="submit"]:hover {
+            background-color: #0056b3; /* 마우스 오버시 버튼 색상 변경 */
+        }
+        .message {
+            color: red; /* 오류 메시지 색상 */
+            margin-left: 80px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>로그인</h2>
+        <form method="POST" action="/login">
+            <input type="text" name="code" placeholder="코드를 입력하세요" required>
+            <input type="submit" value="로그인">
+        </form>
+        <a class="h3" href="/register">코드가 없으세요??</h2>
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        <div class="message">
+            {% for message in messages %}
+            <p>{{ message }}</p>
+            {% endfor %}
+        </div>
+        {% endif %}
+        {% endwith %}
+    </div>
+</body>
+</html>

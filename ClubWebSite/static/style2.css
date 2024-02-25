@@ -1,0 +1,99 @@
+/* styles.css */
+
+/* 전체 스타일 */
+html {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+}
+
+/* 네비게이션 바 스타일 */
+nav {
+    background: #2f89ea;
+    color: #fff;
+    padding: 15px 0;
+    display: flex;
+}
+
+nav ul {
+    list-style: none;
+    justify-content: space-evenly;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    display: inline;
+    
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    transition: 0.3s;
+}
+nav ul li a:hover {
+    font-size: 22px !important;
+    color: #ccc;
+}
+
+/* 헤더 섹션 스타일 */
+header {
+    background: #f4f4f4;
+    padding: 50px 0;
+    text-align: center;
+}
+
+/* 본문 섹션 스타일 */
+.main-content {
+    padding: 50px 0;
+}
+
+.news {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 20px;
+}
+
+.news-item {
+    border: 1px solid #ccc;
+    padding: 20px;
+}
+
+/* 푸터 스타일 */
+footer {
+    background: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.button {
+    padding: 3px 8px;
+    background-color: #007bff;
+    color: #fff;
+    border: 2px solid #007bff; /* 테두리 추가 */
+    border-radius: 5px;
+    cursor: pointer;
+    width: 200px;
+    transition: background-color 0.3s;
+    font-size: 20px; /* 텍스트 크기 키우기 */
+    /*margin-top: 100px; */ /* 위의 요소와의 간격 추가 */
+    /*background-image: linear-gradient(45deg, rgba(255,255,255,0.2) 25%, transparent 25%, transparent 50%, rgba(255,255,255,0.2) 50%, rgba(255,255,255,0.2) 75%, transparent 75%, transparent); /* 질감 추가 */
+}
+
+.button:hover {
+    color: #0056b3;
+}
+

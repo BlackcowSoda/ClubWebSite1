@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/style2.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <title>Smart Farm</title>
+    <style>
+        @keyframes color {
+            0% {
+                color: red;
+            }
+            
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        footer {
+            height: 500px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 네비게이션 바 -->
+    <nav>
+        <div class="container">
+            <h1 class="h1">Smart Farm</h1>
+            <ul>
+                <li><a href="/main1">홈</a></li>
+                <li><a href="#">소개</a></li>
+                <li><a href="#">행사</a></li>
+                {% if not Successful_application %}
+                    <li><a href="/application" >지원페이지</a></li>
+                {% endif %}
+                {% if 'UserName' in session and session['UserName'] == 'Admin' %}
+                    <li><a href="/applications" >지원서들</a></li>
+                {% endif %}
+                <li><a href="/contact">연락처</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- 본문 섹션 -->
+    <section class="main-content">
+        <div class="container">
+            <h1>지원서 확인</h1>
+            <table border="1">
+                <tr>
+                    <th>이름</th>
+                    <th>학번</th>
+                    <th>전화번호</th>
+                    <th>코드</th>
+                    <th>이유</th>
+                    <th>특이사항</th>
+                </tr>
+                {% for application in applications %}
+                <tr>
+                    <td>{{ application.NAME }}</td>
+                    <td>{{ application.CLASS_NUMBER }}</td>
+                    <td>{{ application.PHONE_NUMBER }}</td>
+                    <td>{{ application.CODE }}</td>
+                    <td>{{ application.REASON }}</td>
+                    <td>{{ application.SPECIAL }}</td>
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
+    </section>
+
+    <!-- 푸터 -->
+    <footer>
+        <div class="container">
+            <p>© 2024 스마트팜. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

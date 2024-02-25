@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/style.css">
+    <link rel="stylesheet" href="">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+    <title>SmartFarmClub</title>
+    <style>
+        
+    </style>
+    
+</head>
+<body>
+    <!--<label for="modeToggle" class="dark-mode-switch">
+        <span class="specific-element">Dark Mode</span>
+        <div class="dark-mode-label">
+            <input type="checkbox" id="modeToggle" name="DarkMode" {% if session.DarkMode %}checked{% endif %} value="{% if session.DarkMode %}1{% else %}0{% endif %}">
+            <div class="dark-mode-slider"></div>
+        </div>
+    </label>-->
+
+
+    <!--<input type="checkbox" id="darkModeToggle" onchange="toggleDarkMode()">
+    <label for="darkModeToggle">다크 모드</label>-->
+
+    <div class="container">
+        <!-- Sidebar Section -->
+        <aside class="sidebar">
+            <div class="logo">
+                <img src="../static/images/Logo.png" alt="SmartFarmClub Logo">
+                <h2><span class="danger">Smart</span><span class="specific-element">Farm</span></h2>
+            </div>
+            <div class="section-buttons specific-element">
+                <!-- 홈 섹션 -->
+                <a href="/login" class="login-section">
+                    <span class="material-icons-sharp">login</span> <!--dashboard-->
+                    <h3 class="specific-element">로그인</h3>
+                </a>
+                <!-- 멤버들 섹션 -->
+                <a href="/register" class="Application-section" >
+                    <span class="material-icons-sharp">app_registration</span> <!--person_outline-->
+                    <h3 class="specific-element">회원가입</h3>
+                </a>
+                <!-- 추가적인 섹션 -->
+            </div>
+        </aside>
+        <!-- Main Content -->
+        <main class="content">
+            <h1>스마트팜 동아리 웹사이트에 오신걸 환영합니다!</h1>
+            <!--<h1>Welcome to Our Club Website!</h1>-->
+            <!--<p>You can introduce your club or showcase special events here.</p>-->
+            <p style="color: grey;">우리 스마트팜 동아리에선 다양한 활동을 할 수 있습니다</p>
+        </main> 
+    </div>
+
+
+    <script src="../static/index.js"></script>
+</body>
+</html>

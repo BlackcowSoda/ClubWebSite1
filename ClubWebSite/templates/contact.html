@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/style2.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <title>Smart Farm</title>
+    <style>
+        @keyframes color {
+            0% {
+                color: red;
+            }
+            
+        }
+
+        footer {
+            background: #333;
+            color: #fff;
+            padding: 20px 0;
+            height: 500px; /* 예: 픽셀 단위로 높이 지정 */
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <!-- 네비게이션 바 -->
+    <nav>
+        <div class="container">
+            <h1 class="h1">Smart Farm</h1>
+            <ul>
+                <li><a href="/main1">홈</a></li>
+                <li><a href="/main1">소개</a></li>
+                <li><a href="#">행사</a></li>
+                {% if not Successful_application %}
+                    <li><a href="/application" >지원페이지</a></li>
+                {% endif %}
+                {% if 'UserName' in session and session['UserName'] == 'Admin' %}
+                    <li><a href="/applications" >지원서들</a></li>
+                {% endif %}
+                <li><a href="/contact">연락처</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- 헤더 섹션 -->
+
+
+    <!-- 본문 섹션 -->
+    <section class="main-content">
+        <div class="container">
+            <h2>전화번호들</h2>
+            <div class="news">
+                <div class="news-item">
+                    <h3>동아리 기장(000)</h3>
+                    <p>~</p>
+                </div>
+                <div class="news-item">
+                    <h3>동아리 부기장(000)</h3>
+                    <p>~</p>
+                </div>
+                <div class="news-item">
+                    <h3>동아리 담당 선생님(000)</h3>
+                    <p>~</p>
+                </div>
+                <!-- 추가적인 최근 행사 및 소식 -->
+            </div>
+        </div>
+    </section>
+
+    <!-- 푸터 -->
+    <footer>
+        <div class="container">
+            <p>© 2024 스마트팜. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!--<script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const elements = document.querySelectorAll(".h1");
+
+            elements.forEach(element => {
+                element.addEventListener("mouseover", function() {
+                    const randomColor1 = Math.floor(Math.random() * 16777215).toString(16); // 랜덤 색상 코드 생성
+                    const randomColor2 = Math.floor(Math.random() * 16777215).toString(16); // 랜덤 색상 코드 생성
+                    const randomColor3 = Math.floor(Math.random() * 16777215).toString(16); // 랜덤 색상 코드 생성
+                    element.style.color = `#${randomColor1}`; // 랜덤 색상 적용
+                    element.style.backgroundImage = `linear-gradient(45deg, #${randomColor1}, #${randomColor2}, #${randomColor3})`; // 랜덤 그라데이션 적용
+                });
+            });
+        });
+    </script> -->
+</body>
+</html>
